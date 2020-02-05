@@ -16,11 +16,12 @@ test('The divide function should return 100/2 equals 50', () => {
   expect(divide(100, 2)).toBe(50);
 });
 
-test('Big numbers should return scientific notation', () => {
-  const result = divide(1000000000000000000000, 10000000000000000);
-  expect("" + result).toEqual(expect.stringContaining("e"))
-});
-
+test("big numbers should return scientific notation", ()=>{
+  const result = multiply(20000000000000000,100000000000000);
+  expect("" + result).toEqual(
+    expect.stringContaining("e")
+  );
+})
 
 test('Input is number', () => {
   expect(typeof add(110, 200)).toBe('number');
